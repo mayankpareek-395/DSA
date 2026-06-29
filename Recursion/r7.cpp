@@ -45,3 +45,10 @@ int main(){
         cout<<n<<" ";
     }
 }
+
+//Even better since we are using stl already thus we can use .reverse() function available in algorithm library.
+/*
+    void reverse(vector <int>& arr){
+        arr.reverse();
+    }
+*/
