@@ -45,3 +45,17 @@ void palindrome2(string x){
     if (flag) cout<<"Palindrome";
     else cout<<"Not a Palindrome"; 
 }
+
+bool checking(string x, int i, int j) {
+    if ( i >= j ) return true;
+    if (x[i] != x[j]) return false;
+    else return checking(x, i+1, j-1);
+    }
+
+void palindrome3 (string x){
+    bool flag = checking(x, 0, x.length()-1);
+
+    if (flag) cout<<"Palindrome";
+    else cout<<"Not a Palindrome"; 
+
+}
