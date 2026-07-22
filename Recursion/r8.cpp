@@ -5,6 +5,7 @@ using namespace std;
 
 void palindrome(string x);
 void palindrome2(string x);
+bool palindrome4 (const string &x, int i);
 
 int main(){
 string str = "123421";
@@ -58,4 +59,10 @@ void palindrome3 (string x){
     if (flag) cout<<"Palindrome";
     else cout<<"Not a Palindrome"; 
 
+}
+
+bool palindrome4 (const string &x, int i){
+    if (i >= x.length()/2) return true;
+    if ( x[i] != x[x.length() - i - 1] ) return false;
+    else return palindrome4(x, i+1);
 }
