@@ -1,12 +1,14 @@
 //check if the string is palindrome or not.
 #include<iostream>
+#include<bits/stdc++.h>
 using namespace std;
 
 string palindrome(string x);
+string palindrome2(string x);
 
 int main(){
-string str = "ABCDBA";
-palindrome(str);
+string str = "123421";
+palindrome2(str);
 
 }
 
@@ -23,4 +25,23 @@ string palindrome(string x){
         cout<<"Not Palindrome";
     }
 
+}
+
+//what else I could do - I could maybe have a flag, loop once, 
+//where I go from start and end both ways if any mismatch is seen I set flag to false.
+
+// I could also put a checking if statement in loop if flag = False then break;
+
+string palindrome2(string x){
+    int n = x.length();
+    bool flag = true;
+    for (int i = 0; i < n/2; i++){
+        cout<<x[i]<<" and "<<x[n-i-1]<<endl;
+        if (x[i] != x[n-i-1]) {
+            flag = false;
+            break;
+        }
+    }
+    if (flag) cout<<"Palindrome";
+    else cout<<"Not a Palindrome"; 
 }
