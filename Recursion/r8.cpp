@@ -3,8 +3,8 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-string palindrome(string x);
-string palindrome2(string x);
+void palindrome(string x);
+void palindrome2(string x);
 
 int main(){
 string str = "123421";
@@ -13,7 +13,7 @@ palindrome2(str);
 }
 
 //brute force
-string palindrome(string x){
+void palindrome(string x){
     string temp;
     for(auto n : x){
         temp = n + temp;
@@ -32,7 +32,7 @@ string palindrome(string x){
 
 // I could also put a checking if statement in loop if flag = False then break;
 
-string palindrome2(string x){
+void palindrome2(string x){
     int n = x.length();
     bool flag = true;
     for (int i = 0; i < n/2; i++){
